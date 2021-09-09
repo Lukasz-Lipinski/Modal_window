@@ -1,3 +1,9 @@
+# Dialog
+
+window created by using ReactJS and Sass.
+
+Needed to install sass by terminal. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
