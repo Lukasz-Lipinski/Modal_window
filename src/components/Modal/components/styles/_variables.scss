@@ -1,0 +1,31 @@
+$theme-color: rgba(0, 0, 0, 0.603);
+$background-color: #ffffff;
+$danger-color: #ff1810;
+$danger-color-darker: #c0392b;
+$primary-color: #3498db;
+$primary-color-darker: #2980b9;
+$white: #ecf0f1;
+$black: #000;
+
+
+@mixin outlineBtn($themeColor, $borderWidth) {
+  outline: $borderWidth solid $themeColor;
+  color: $themeColor;
+}
+
+@mixin btn_body($color, $background-color) {
+  padding: 4px 10px;
+  font-size: 24px;
+  border-radius: 100%;
+  color: $color;
+  background-color: $background-color;
+  outline: none;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+@mixin btn_hover($background-color: $danger-color-darker) {
+  transition: background-color outline 0.5s;
+  background-color: $background-color;
+  cursor: pointer;
+}

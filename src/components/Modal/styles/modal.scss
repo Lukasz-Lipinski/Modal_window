@@ -1,0 +1,24 @@
+@use "../components/styles/variables" as *;
+
+.content {
+  display: flex;
+  justify-content: center;
+  
+  &-show_btn {
+    margin-top: 15px;
+    text-decoration: none;
+    padding: 8px 14px;
+    @include outlineBtn($primary-color, 1px);
+    transition: outline 0.6s;
+    transition: box-shadow 0.6s;
+    box-shadow: none;
+    cursor: pointer;
+  }
+  
+  &-show_btn:hover {
+    @include outlineBtn($primary-color-darker, 1px);
+    transition: outline 0.6s;
+    transition: box-shadow 0.6s;
+    box-shadow: 2px 2px 10px gray;
+  }
+}

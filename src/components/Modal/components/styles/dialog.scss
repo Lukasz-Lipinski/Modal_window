@@ -1,0 +1,78 @@
+@use 'variables' as *;
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 60px 10px;
+  justify-content: center;
+  background-color: $theme-color;
+
+  &-modal {
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 16px;
+    background-color: $white;
+    width: 500px;
+    height: auto;
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 10px;
+
+        &-btns {
+            position: relative;
+            text-decoration: none;
+
+            &_close {
+              @include btn_body($white, $danger-color);
+            }
+            :hover {
+              @include btn_hover();
+            }
+          }
+      }
+
+      &-body {
+        border-block: 2px solid lightgrey;
+        padding: 16px 6px;
+        font-size: 18px;
+      }
+
+      &-footer {
+        padding-block: 14px;
+
+        &-btns {
+          position: relative;
+          display: flex;
+          justify-content: space-around;
+
+          &_abort{
+            @include btn_body($white, $danger-color);
+            border-radius: 8px;
+          }
+          &_abort:hover {
+            @include btn_hover();
+          }
+
+          &_confirm {
+            @include btn_body($white, $primary-color);
+            border-radius: 8px;
+          }
+
+          &_confirm:hover {
+            @include btn_hover($primary-color-darker);
+            border-radius: 8px;
+          }
+        }
+      }
+  }
+}
